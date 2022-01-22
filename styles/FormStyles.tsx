@@ -10,15 +10,15 @@ export const StyledTextInput = styled.TextInput`
   width: 70%;
   height: 40px;
   margin: 20px;
-  border-color: #e4e1e1ff;
+  border-color: #302720;
   border-width: 1px;
   border-radius: 16px;
-  padding: 30px;
-  color: #e4e1e1ff;
+  padding: 20px;
+  color: #000000;
 `;
 
 export const StyledText = styled.Text`
-  color: #e4e1e1ff;
-  font-size: 20px;
+  color: #302720;
+  font-size: 15px;
   text-transform: uppercase;
 `;

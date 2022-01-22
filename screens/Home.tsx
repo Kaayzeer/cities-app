@@ -1,4 +1,4 @@
-const image = require("../img/city_pop_bg.png");
+const image = require("../img/native_background.png");
 import {
   StyledHome,
   StyledImage,

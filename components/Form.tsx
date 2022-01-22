@@ -36,8 +36,8 @@ export default function Form({}) {
           name="search"
           borderRadius={50}
           size={40}
-          color="white"
-          backgroundColor="#010101" /* onPress={} */
+          color="#302720"
+          backgroundColor="#fefefe" /* onPress={} */
         ></Ionicons.Button>
       </FormContainer>
     </>

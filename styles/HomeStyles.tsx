@@ -1,13 +1,21 @@
 import styled from "styled-components/native";
-/* const image = require("../img/city_pop_bg.png"); */
-/* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
 
 export const StyledText = styled.Text`
-  color: #f4e5f5;
+  color: #fff0e0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 `;
 
 export const StyledButton = styled.TouchableOpacity`
-  border: 1px solid #fff;
+  border: 1px solid #fcd5bdb9;
+  padding: 20px;
+  width: 70%;
+  border-radius: 26px;
+  margin-top: 10px;
+  background-color: #f9c3942c;
 `;
 
 export const StyledImage = styled.ImageBackground`
@@ -16,7 +24,8 @@ export const StyledImage = styled.ImageBackground`
   flex: 1;
   background-color: #fff;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-bottom: 20px;
 `;
 export const StyledHome = styled.View`
   flex: 1;
