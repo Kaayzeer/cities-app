@@ -1,4 +1,6 @@
+import { View } from "react-native";
 import { useState, useEffect } from "react";
+
 // hooks
 import { useFetch } from "../hooks/useFetch";
 //components
@@ -7,12 +9,12 @@ import CityPopulation from "../components/CityPopulation";
 // interfaces
 import { cityPop } from "../interfaces/cityPop";
 //styles
-import { StyledPage } from "../styles/CityCountryStyles";
+import { styles } from "../styles/CityCountryStyles";
 
 export default function City() {
   return (
-    <StyledPage /* style={{searchCity ? "showPop" : ""}} */>
+    <View style={styles.container} /* style={{searchCity ? "showPop" : ""}} */>
       <Form />
-    </StyledPage>
+    </View>
   );
 }

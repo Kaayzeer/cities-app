@@ -1,32 +1,28 @@
-import styled from "styled-components/native";
+import { StyleSheet } from "react-native";
 
-export const StyledText = styled.Text`
-  color: #fff0e0;
-  text-align: center;
-  font-weight: bold;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-`;
-
-export const StyledButton = styled.TouchableOpacity`
-  border: 1px solid #fcd5bdb9;
-  padding: 20px;
-  width: 70%;
-  border-radius: 26px;
-  margin-top: 10px;
-  background-color: #f9c3942c;
-`;
-
-export const StyledImage = styled.ImageBackground`
-  width: 100%;
-  height: 100%;
-  flex: 1;
-  background-color: #fff;
-  align-items: center;
-  justify-content: flex-end;
-  padding-bottom: 20px;
-`;
-export const StyledHome = styled.View`
-  flex: 1;
-`;
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  imageWrapper: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "flex-end",
+  },
+  text: {
+    color: "#fff0e0",
+    textAlign: "center",
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    letterSpacing: 1,
+  },
+  button: {
+    borderColor: "#fcd5bdb9",
+    borderWidth: 1,
+    padding: 20,
+    width: "70%",
+    borderRadius: 26,
+    backgroundColor: "#f9c3942c",
+    marginBottom: 20,
+  },
+});

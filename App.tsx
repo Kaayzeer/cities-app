@@ -14,8 +14,8 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="City Pop" component={Home} />
-        <Stack.Screen name="city" component={City} />
-        <Stack.Screen name="country" component={Country} />
+        <Stack.Screen name="City" component={City} />
+        <Stack.Screen name="Country" component={Country} />
       </Stack.Navigator>
     </NavigationContainer>
   );

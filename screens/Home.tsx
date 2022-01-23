@@ -1,22 +1,27 @@
+import { View, ImageBackground, TouchableOpacity, Text } from "react-native";
+//styles
+import { styles } from "../styles/HomeStyles";
+
 const image = require("../img/native_background.png");
-import {
-  StyledHome,
-  StyledImage,
-  StyledButton,
-  StyledText,
-} from "../styles/HomeStyles";
+
 /* background-image: url(${}); */
 export default function Home({ navigation }: { navigation: any }) {
   return (
-    <StyledHome>
-      <StyledImage source={image}>
-        <StyledButton onPress={() => navigation.navigate("city")}>
-          <StyledText> Go To City </StyledText>
-        </StyledButton>
-        <StyledButton onPress={() => navigation.navigate("country")}>
-          <StyledText> Go To Country</StyledText>
-        </StyledButton>
-      </StyledImage>
-    </StyledHome>
+    <View style={styles.container}>
+      <ImageBackground style={styles.imageWrapper} source={image}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("City")}
+        >
+          <Text style={styles.text}> Go To City </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("Country")}
+        >
+          <Text style={styles.text}> Go To Country</Text>
+        </TouchableOpacity>
+      </ImageBackground>
+    </View>
   );
 }

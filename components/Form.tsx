@@ -1,12 +1,9 @@
 /* // icons
 import { RiSearch2Line } from "react-icons/ri"; */
 // styles
+import { SafeAreaView, Text, TextInput } from "react-native";
 
-import {
-  FormContainer,
-  StyledTextInput,
-  StyledText,
-} from "../styles/FormStyles";
+import { styles } from "../styles/FormStyles";
 
 import { Ionicons } from "@expo/vector-icons";
 
@@ -24,22 +21,24 @@ export default function Form({}) {
 
   return (
     <>
-      <FormContainer>
-        <StyledText>Search for a city</StyledText>
-        <StyledTextInput
+      <SafeAreaView style={styles.container}>
+        <Text style={styles.text}>Search for a city</Text>
+        <TextInput
           onChangeText={handleChange}
+          style={styles.input}
           /* value={inputValue} */
-          placeholder="Search"
+          placeholder="search"
+          /* placeholderTextColor="black" */
         />
 
         <Ionicons.Button
           name="search"
           borderRadius={50}
-          size={40}
+          size={30}
           color="#302720"
           backgroundColor="#fefefe" /* onPress={} */
         ></Ionicons.Button>
-      </FormContainer>
+      </SafeAreaView>
     </>
   );
 }
