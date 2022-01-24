@@ -7,16 +7,29 @@ import { styles } from "../styles/FormStyles";
 
 import { Ionicons } from "@expo/vector-icons";
 
-export default function Form({}) {
+type Props = {
+  handleSubmit: () => void;
+  setInput: (input: string) => void;
+  isLoading: boolean;
+  isCountry: boolean;
+  inputValue: string;
+};
+
+export default function Form({
+  handleSubmit,
+  setInput,
+  isCountry,
+  inputValue,
+}: Props) {
   const handleChange = (e: any) => {
     console.log(e);
-    /*     let value = e;
+    let value = e;
     value = value.replace(/[^A-Öa-ö ]/gi, "");
     let trimmedValue = value.trim();
 
     if (trimmedValue.length > 0 && trimmedValue.length <= 20) {
       setInput(value);
-    } else setInput(""); */
+    } else setInput("");
   };
 
   return (
@@ -26,7 +39,7 @@ export default function Form({}) {
         <TextInput
           onChangeText={handleChange}
           style={styles.input}
-          /* value={inputValue} */
+          value={inputValue}
           placeholder="search"
           /* placeholderTextColor="black" */
         />
@@ -37,6 +50,7 @@ export default function Form({}) {
           size={30}
           color="#302720"
           backgroundColor="#fefefe" /* onPress={} */
+          onPressOut={handleSubmit}
         ></Ionicons.Button>
       </SafeAreaView>
     </>
