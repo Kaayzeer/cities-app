@@ -1,7 +1,7 @@
 export interface GeoNames {
   geonames: Fetch[];
 }
-interface Fetch {
+export interface Fetch {
   adminCode1: string;
   adminCodes1: insideFetch[];
   adminName1: string;

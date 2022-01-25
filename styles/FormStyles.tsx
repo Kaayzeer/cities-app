@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
   },
   input: {
     width: "70%",
-    margin: 10,
+    margin: 13,
     padding: 10,
     borderWidth: 1,
     borderColor: "#302720",
@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
   },
   text: {
     color: "#302720",
-    fontSize: 15,
+    fontSize: 12,
     textTransform: "uppercase",
   },
 });

@@ -2,9 +2,8 @@ import { View, ImageBackground, TouchableOpacity, Text } from "react-native";
 //styles
 import { styles } from "../styles/HomeStyles";
 
-const image = require("../img/native_background.png");
+const image = require("../assets/native_background.png");
 
-/* background-image: url(${}); */
 export default function Home({ navigation }: { navigation: any }) {
   return (
     <View style={styles.container}>
