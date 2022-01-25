@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import { useState, useEffect } from "react";
 
 // hooks
@@ -57,6 +57,7 @@ export default function City() {
           population={searchCity!.population}
         />
       )}
+      {error && <Text style={styles.error}>{error}</Text>}
     </View>
   );
 }

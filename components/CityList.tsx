@@ -1,15 +1,16 @@
-import { FlatList, Text, View } from "react-native";
+import { FlatList, Text, View, TouchableHighlight } from "react-native";
 import { styles } from "../styles/CityListStyles";
 
 import { sortData } from "../interfaces/sortData";
 import React, { useEffect, useState, FC } from "react";
 import { Fetch, GeoNames } from "../interfaces/Geonames";
+import { cityPop } from "../interfaces/cityPop";
 
 type Props = {
-  data: Fetch;
+  data: cityPop;
 };
 
-const CityList = ({ data, setCityPop }: { data: any; setCityPop: string }) => {
+const CityList = ({ data, setCityPop }: { data: any; setCityPop: any }) => {
   console.log(data);
   const [cities, setCities] = useState([]);
 
@@ -32,18 +33,23 @@ const CityList = ({ data, setCityPop }: { data: any; setCityPop: string }) => {
       keyExtractor={(cities, index) => index.toString()}
       data={cities}
       renderItem={({ item, index }: { item: any; index: number }) => (
-        <View
-          style={[
-            isEven(index + 1) ? styles.even : styles.unEven,
-            styles.container,
-          ]}
-        >
-          <Text style={styles.text}>{item.name}</Text>
-          <Text style={styles.number}>{index + 1}</Text>
-        </View>
+        <TouchableHighlight onPress={() => setCityPop(item)}>
+          <View
+            style={[
+              isEven(index + 1) ? styles.even : styles.unEven,
+              styles.container,
+            ]}
+          >
+            <Text style={styles.text}>{item.name}</Text>
+            <Text style={styles.number}>{index + 1}</Text>
+          </View>
+        </TouchableHighlight>
       )}
     ></FlatList>
   );
 };
 
 export default CityList;
+/* function city(city: any) {
+  throw new Error("Function not implemented.");
+} */

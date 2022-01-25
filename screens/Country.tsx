@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import React, { useEffect, useState } from "react";
 // components
 import Form from "../components/Form";
@@ -37,15 +37,23 @@ export default function Country() {
   };
   return (
     <View style={styles.container} /* className={cityPop ? "showPop" : ""} */>
-      <Form
-        setInput={setCountryInput}
-        handleSubmit={handleSubmit}
-        isLoading={isLoading}
-        isCountry={false}
-        inputValue={countryInput}
-      />
+      {!cityPop && (
+        <Form
+          setInput={setCountryInput}
+          handleSubmit={handleSubmit}
+          isLoading={isLoading}
+          isCountry={true}
+          inputValue={countryInput}
+        />
+      )}
 
-      {countryCode && <CityList data={data!} setCityPop={setCityPop} />}
+      {!cityPop && countryCode && (
+        <CityList data={data!} setCityPop={setCityPop} />
+      )}
+      {cityPop && (
+        <CityPopulation name={cityPop.name} population={cityPop.population} />
+      )}
+      {error && <Text style={styles.error}>{error}</Text>}
     </View>
   );
 }

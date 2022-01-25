@@ -35,13 +35,14 @@ export default function Form({
   return (
     <>
       <SafeAreaView style={styles.container}>
-        <Text style={styles.text}>Search for a city</Text>
+        <Text style={styles.text}>
+          {isCountry ? "search country" : "search city"}
+        </Text>
         <TextInput
           onChangeText={handleChange}
           style={styles.input}
           value={inputValue}
           placeholder="search"
-          /* placeholderTextColor="black" */
         />
 
         <Ionicons.Button
@@ -49,7 +50,7 @@ export default function Form({
           borderRadius={50}
           size={30}
           color="#302720"
-          backgroundColor="#fefefe" /* onPress={} */
+          backgroundColor="#fefefe"
           onPressOut={handleSubmit}
         ></Ionicons.Button>
       </SafeAreaView>

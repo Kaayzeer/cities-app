@@ -5,4 +5,9 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fefefe",
   },
+  error: {
+    fontSize: 15,
+    fontFamily: "Avenir",
+    textAlign: "center",
+  },
 });
