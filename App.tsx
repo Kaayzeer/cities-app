@@ -7,8 +7,6 @@ import Country from "./screens/Country";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-const citypop = require("./assets/citypop.png");
-
 const Stack = createNativeStackNavigator();
 
 function App() {

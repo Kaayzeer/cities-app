@@ -1,23 +1,28 @@
 import { FlatList, Text, View, TouchableHighlight } from "react-native";
+import React, { useEffect, useState } from "react";
+
+//interfaces
+import { sortData } from "../interfaces/sortData";
+import { cityPop } from "../interfaces/cityPop";
+//styles
 import { styles } from "../styles/CityListStyles";
 
-import { sortData } from "../interfaces/sortData";
-import React, { useEffect, useState, FC } from "react";
-import { Fetch, GeoNames } from "../interfaces/Geonames";
-import { cityPop } from "../interfaces/cityPop";
-
-type Props = {
-  data: cityPop;
-};
-
-const CityList = ({ data, setCityPop }: { data: any; setCityPop: any }) => {
+const CityList = ({
+  data,
+  setCityPop,
+}: {
+  data: any;
+  setCityPop: (cityPop: cityPop | null) => void;
+}) => {
   console.log(data);
   const [cities, setCities] = useState([]);
 
+  // The city list sort function
   const sortCities = (arr: []) => {
     return arr.sort((a: sortData, b: sortData) => b.population - a.population);
-  }; // The city list sort function
+  };
 
+  // watches for changes in the data, when it does it puts the sortcities() inside the setCities() and displays the sorted array on the list
   useEffect(() => {
     if (data) {
       setCities(sortCities(data.geonames));
@@ -50,6 +55,3 @@ const CityList = ({ data, setCityPop }: { data: any; setCityPop: any }) => {
 };
 
 export default CityList;
-/* function city(city: any) {
-  throw new Error("Function not implemented.");
-} */

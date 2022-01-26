@@ -1,11 +1,8 @@
-/* // icons
-import { RiSearch2Line } from "react-icons/ri"; */
-// styles
 import { SafeAreaView, Text, TextInput, ActivityIndicator } from "react-native";
-
-import { styles } from "../styles/FormStyles";
-
+// icons
 import { Ionicons } from "@expo/vector-icons";
+// styles
+import { styles } from "../styles/FormStyles";
 
 type Props = {
   handleSubmit: () => void;
@@ -22,7 +19,7 @@ export default function Form({
   inputValue,
   isLoading,
 }: Props) {
-  const handleChange = (e: any) => {
+  const handleChange = (e: string) => {
     console.log(e);
     let value = e;
     value = value.replace(/[^A-Öa-ö ]/gi, "");
