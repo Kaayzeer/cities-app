@@ -23,4 +23,8 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     textTransform: "uppercase",
   },
+  loading: {
+    marginRight: 13,
+    marginTop: 8,
+  },
 });

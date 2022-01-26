@@ -25,6 +25,7 @@ export default function Country() {
 
   const { fetchedData: data } = useFetch(countryCodeApi, false);
 
+  // This funtion listens to any changes of the fetchedData. It Prevents any sideeffect when handleSubmit function triggers the first fetch.
   useEffect(() => {
     if (fetchedData) {
       setCountryCode(fetchedData.geonames[0].countryCode);
@@ -36,7 +37,7 @@ export default function Country() {
     setCountryInput("");
   };
   return (
-    <View style={styles.container} /* className={cityPop ? "showPop" : ""} */>
+    <View style={[styles.container, cityPop ? styles.cPop : null]}>
       {!cityPop && (
         <Form
           setInput={setCountryInput}

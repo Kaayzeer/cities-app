@@ -1,7 +1,7 @@
 /* // icons
 import { RiSearch2Line } from "react-icons/ri"; */
 // styles
-import { SafeAreaView, Text, TextInput } from "react-native";
+import { SafeAreaView, Text, TextInput, ActivityIndicator } from "react-native";
 
 import { styles } from "../styles/FormStyles";
 
@@ -20,6 +20,7 @@ export default function Form({
   setInput,
   isCountry,
   inputValue,
+  isLoading,
 }: Props) {
   const handleChange = (e: any) => {
     console.log(e);
@@ -45,14 +46,22 @@ export default function Form({
           placeholder="search"
         />
 
-        <Ionicons.Button
-          name="search"
-          borderRadius={50}
-          size={30}
-          color="#302720"
-          backgroundColor="#fefefe"
-          onPressOut={handleSubmit}
-        ></Ionicons.Button>
+        {!isLoading ? (
+          <Ionicons.Button
+            name="search"
+            borderRadius={50}
+            size={30}
+            color="#302720"
+            backgroundColor="#fefefe"
+            onPressOut={handleSubmit}
+          ></Ionicons.Button>
+        ) : (
+          <ActivityIndicator
+            size="small"
+            color="#302720"
+            style={styles.loading}
+          />
+        )}
       </SafeAreaView>
     </>
   );

@@ -2,14 +2,15 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    marginVertical: "40%",
+    marginVertical: "20%",
     marginHorizontal: "15%",
     alignItems: "center",
-    color: "#fcf9f9",
+    justifyContent: "center",
+    backgroundColor: "#f5e8dd",
     borderColor: "#302720",
     borderWidth: 1,
     borderRadius: 6,
-    paddingVertical: 3,
+    height: 150,
   },
   textH3: {
     textTransform: "uppercase",

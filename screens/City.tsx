@@ -1,6 +1,5 @@
 import { View, Text } from "react-native";
 import { useState, useEffect } from "react";
-
 // hooks
 import { useFetch } from "../hooks/useFetch";
 //components
@@ -33,16 +32,8 @@ export default function City() {
   };
 
   return (
-    <View style={styles.container}>
-      <Form
-        setInput={setcityInput}
-        handleSubmit={handleSubmit}
-        isLoading={isLoading}
-        isCountry={false}
-        inputValue={cityInput}
-      />
-
-      {/* {!searchCity && (
+    <View style={[styles.container, searchCity ? styles.cPop : null]}>
+      {!searchCity && (
         <Form
           setInput={setcityInput}
           handleSubmit={handleSubmit}
@@ -50,7 +41,7 @@ export default function City() {
           isCountry={false}
           inputValue={cityInput}
         />
-      )} */}
+      )}
       {searchCity && (
         <CityPopulation
           name={searchCity!.name}

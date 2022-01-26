@@ -10,4 +10,7 @@ export const styles = StyleSheet.create({
     fontFamily: "Avenir",
     textAlign: "center",
   },
+  cPop: {
+    paddingVertical: "40%",
+  },
 });
