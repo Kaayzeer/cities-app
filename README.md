@@ -73,4 +73,4 @@ To setup this project locally you may follow the installation steps below.
 
 - [Nikolas Rosinelli](https://github.com/Kaayzeer)
 
-Project Link: [https://github.com/kayzersozee/cities-app](https://github.com/kayzersozee/cities-app)
+Project Link: [https://github.com/Kaayzeer/cities-app](https://github.com/kayzersozee/cities-app)
